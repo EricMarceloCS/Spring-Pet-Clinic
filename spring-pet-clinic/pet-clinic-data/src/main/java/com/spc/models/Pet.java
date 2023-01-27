@@ -1,4 +1,4 @@
-package com.example.spc.models;
+package com.spc.models;
 
 import java.time.LocalDate;
 
