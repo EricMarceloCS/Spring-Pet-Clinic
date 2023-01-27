@@ -1,4 +1,4 @@
-package com.example.spc;
+package com.spc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
