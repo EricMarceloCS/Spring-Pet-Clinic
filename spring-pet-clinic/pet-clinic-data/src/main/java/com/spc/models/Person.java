@@ -1,6 +1,6 @@
 package com.spc.models;
 
-public class Person {
+public class Person extends BaseEntity{
 	
 	private String frstName;
 	private String lastname;
