@@ -2,22 +2,22 @@ package com.spc.models;
 
 public class Person extends BaseEntity{
 	
-	private String frstName;
-	private String lastname;
+	private static final long serialVersionUID = 1L;
 	
-	public String getFrstName() {
-		return frstName;
-	}
-	public void setFrstName(String frstName) {
-		this.frstName = frstName;
-	}
-	public String getLastname() {
-		return lastname;
-	}
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
+	private String firstName;
+	private String lastName;
 	
-	
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String frstName) {
+		this.firstName = frstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
 }

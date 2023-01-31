@@ -4,7 +4,7 @@ import java.io.Serializable;
 
 public class BaseEntity implements Serializable {
 	
-	private static final long serialVersionUID = 1L;
+	protected static final long serialVersionUID = 1L;
 	
 	private Long id;
 
@@ -15,9 +15,5 @@ public class BaseEntity implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
-	
-	
-	
 
 }
