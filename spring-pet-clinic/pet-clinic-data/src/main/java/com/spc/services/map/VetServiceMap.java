@@ -23,9 +23,9 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
 	}
 
 	@Override
-	public Vet save(Long id, Vet type) {
+	public Vet save(Vet type) {
 		// TODO Auto-generated method stub
-		return super.save(id, type);
+		return super.save(type);
 	}
 
 	@Override
