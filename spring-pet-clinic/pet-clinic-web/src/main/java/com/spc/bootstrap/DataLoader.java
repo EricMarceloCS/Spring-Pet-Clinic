@@ -1,5 +1,6 @@
 package com.spc.bootstrap;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -12,14 +13,12 @@ public class DataLoader implements CommandLineRunner {
 
 	private final OwnerService ownerSerivce;
 	private final VetService vetService;
-	private final PetService petService;
 	
-	public DataLoader() {
+	@Autowired
+	public DataLoader(OwnerService ownerSerivce, VetService vetService) {
 		super();
-		// TODO Auto-generated constructor stub
-		this.ownerSerivce = new OwnerServiceMap();
-		this.vetService = new VetServiceMap();
-		this.petService = new PetServiceMap();
+		this.ownerSerivce = ownerSerivce;
+		this.vetService = vetService;
 	}
 
 	@Override
