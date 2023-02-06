@@ -2,6 +2,11 @@ package com.spc.models;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="types")
 public class PetType extends BaseEntity{
 	
 	private static final long serialVersionUID = 1L;
