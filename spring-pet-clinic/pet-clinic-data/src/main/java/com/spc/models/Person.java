@@ -2,7 +2,15 @@ package com.spc.models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.MappedSuperclass;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@Setter
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 @MappedSuperclass
 public class Person extends BaseEntity{
 	
@@ -13,17 +21,12 @@ public class Person extends BaseEntity{
 	@Column(name="last_name")
 	private String lastName;
 	
-	public String getFirstName() {
-		return firstName;
-	}
-	public void setFirstName(String frstName) {
-		this.firstName = frstName;
-	}
-	public String getLastName() {
-		return lastName;
-	}
-	public void setLastName(String lastName) {
+	public Person(Long id, String firstName, String lastName) {
+		super(id);
+		this.firstName = firstName;
 		this.lastName = lastName;
 	}
-
+	
+	
+	
 }
