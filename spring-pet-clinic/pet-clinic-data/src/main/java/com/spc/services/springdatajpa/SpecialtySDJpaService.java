@@ -1,6 +1,7 @@
 package com.spc.services.springdatajpa;
 
-import java.util.Optional;
+import java.util.HashSet;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
@@ -8,10 +9,11 @@ import org.springframework.stereotype.Service;
 
 import com.spc.models.Specialty;
 import com.spc.repositories.SpecialtyRepository;
+import com.spc.services.SpecialtyService;
 
 @Service
 @Profile("springdatajpa")
-public class SpecialtySDJpaService implements SpecialtyRepository {
+public class SpecialtySDJpaService implements SpecialtyService {
 
 	private final SpecialtyRepository specialtyRepository;
 	
@@ -22,68 +24,39 @@ public class SpecialtySDJpaService implements SpecialtyRepository {
 		this.specialtyRepository = specialtyRepository;
 	}
 
-	@Override
-	public <S extends Specialty> S save(S entity) {
-		return specialtyRepository.save(entity);
-	}
 
 	@Override
-	public <S extends Specialty> Iterable<S> saveAll(Iterable<S> entities) {
-		return specialtyRepository.saveAll(entities);
+	public Set<Specialty> findAll() {
+		Set<Specialty> specialties = new HashSet<>();
+		specialtyRepository.findAll().forEach(specialties::add);
+		return specialties;
 	}
 
-	@Override
-	public Optional<Specialty> findById(Long id) {
-		return specialtyRepository.findById(id);
-	}
 
 	@Override
-	public boolean existsById(Long id) {
-		return specialtyRepository.existsById(id);
+	public Specialty findById(Long id) {
+		return specialtyRepository.findById(id).orElse(null);
 	}
 
-	@Override
-	public Iterable<Specialty> findAll() {
-		return specialtyRepository.findAll();
-	}
 
 	@Override
-	public Iterable<Specialty> findAllById(Iterable<Long> ids) {
-		return specialtyRepository.findAllById(ids);
+	public Specialty save(Specialty object) {
+		return specialtyRepository.save(object);
 	}
 
+
 	@Override
-	public long count() {
-		return specialtyRepository.count();
+	public void delete(Specialty object) {
+		specialtyRepository.delete(object);
+		
 	}
+
 
 	@Override
 	public void deleteById(Long id) {
 		specialtyRepository.deleteById(id);
-
+		
 	}
 
-	@Override
-	public void delete(Specialty entity) {
-		specialtyRepository.delete(entity);
-
-	}
-
-	@Override
-	public void deleteAllById(Iterable<? extends Long> ids) {
-		specialtyRepository.deleteAllById(ids);
-	}
-
-	@Override
-	public void deleteAll(Iterable<? extends Specialty> entities) {
-		specialtyRepository.deleteAll(entities);
-
-	}
-
-	@Override
-	public void deleteAll() {
-		specialtyRepository.deleteAll();
-
-	}
 
 }
