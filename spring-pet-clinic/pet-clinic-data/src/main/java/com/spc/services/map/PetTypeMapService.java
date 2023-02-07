@@ -4,42 +4,39 @@ import java.util.Set;
 
 import org.springframework.stereotype.Service;
 
-import com.spc.models.Pet;
-import com.spc.services.PetService;
+import com.spc.models.PetType;
+import com.spc.services.PetTypeService;
 
 @Service
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
-
+public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
+	
 	@Override
-	public Set<Pet> findAll() {
-		// TODO Auto-generated method stub
+	public Set<PetType> findAll(){
 		return super.findAll();
 	}
 
 	@Override
-	public Pet findById(Long id) {
+	public PetType findById(Long id) {
 		// TODO Auto-generated method stub
 		return super.findById(id);
 	}
 
 	@Override
-	public Pet save(Pet object) {
+	public PetType save(PetType object) {
 		// TODO Auto-generated method stub
 		return super.save(object);
 	}
 
 	@Override
-	public void delete(Pet object) {
+	public void delete(PetType object) {
 		// TODO Auto-generated method stub
 		super.delete(object);
-
 	}
 
 	@Override
 	public void deleteById(Long id) {
 		// TODO Auto-generated method stub
 		super.deleteById(id);
-
 	}
 
 }
