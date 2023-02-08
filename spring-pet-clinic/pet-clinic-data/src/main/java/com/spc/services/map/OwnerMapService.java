@@ -29,19 +29,16 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
 
 	@Override
 	public Set<Owner> findAll() {
-		// TODO Auto-generated method stub
 		return super.findAll();
 	}
 
 	@Override
 	public Owner findById(Long id) {
-		// TODO Auto-generated method stub
 		return super.findById(id);
 	}
 
 	@Override
 	public Owner save(Owner type) {
-		// TODO Auto-generated method stub
 		if(type != null) {
 			if(type.getPets() != null) {
 				type.getPets().forEach(pet -> {
@@ -66,22 +63,19 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
 
 	@Override
 	public void deleteById(Long id) {
-		// TODO Auto-generated method stub
 		super.deleteById(id);
 	}
 
 	@Override
 	public void delete(Owner type) {
-		// TODO Auto-generated method stub
 		
 		super.delete(type);
 	}
 
 	@Override
 	public Owner findByLastName(String lastName) {
-		// TODO Auto-generated method stub
 		Set<Owner> owners = this.findAll();
-		Optional<Owner> owner = owners.stream().filter(o -> o.getLastName().equals(lastName)).findAny();
+		Optional<Owner> owner = owners.stream().filter(o -> o.getLastName().equalsIgnoreCase(lastName)).findAny();
 		return owner.orElse(null);
 	}
 
