@@ -1,7 +1,9 @@
 package com.spc.services.map;
 
+import java.util.List;
 import java.util.Optional;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
@@ -77,6 +79,12 @@ public class OwnerMapService extends AbstractMapService<Owner, Long> implements 
 		Set<Owner> owners = this.findAll();
 		Optional<Owner> owner = owners.stream().filter(o -> o.getLastName().equalsIgnoreCase(lastName)).findAny();
 		return owner.orElse(null);
+	}
+
+	@Override
+	public List<Owner> findAllByLastNameLike(String lastName) {
+		List<Owner> owners = this.findAll().stream().filter(olm -> olm.equals(lastName)).collect(Collectors.toList());
+		return owners;
 	}
 
 

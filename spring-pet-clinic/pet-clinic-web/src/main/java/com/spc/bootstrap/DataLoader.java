@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 import com.spc.models.*;
 import com.spc.services.*;
 
+
 @Component
 public class DataLoader implements CommandLineRunner {
 
