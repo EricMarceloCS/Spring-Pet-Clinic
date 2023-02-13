@@ -1,5 +1,6 @@
 package com.spc.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -19,6 +20,17 @@ public class PetType extends BaseEntity{
 	
 	private static final long serialVersionUID = 1L;
 	
+	@Column(name="name")
 	private String name;
+	
+	public PetType(Long id, String name) {
+		super(id);
+		this.name = name;
+	}
+	
+	@Override
+	public String toString() {
+		return this.name;
+	}
 	
 }
