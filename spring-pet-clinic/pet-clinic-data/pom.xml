@@ -9,7 +9,6 @@
   <artifactId>pet-clinic-data</artifactId>
   
   <properties>
-		<!-- <java.version>17</java.version>-->
 		<spring-boot.repackage.skip>true</spring-boot.repackage.skip>
 		<java.version>17</java.version>
 	</properties>
@@ -52,16 +51,7 @@
 		</dependency>
 				
   </dependencies>
-  <!-- 
-  	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>
-	-->
+
 	<build>
 		<plugins>
 			<plugin>
