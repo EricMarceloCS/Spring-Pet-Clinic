@@ -43,11 +43,7 @@ public class Owner extends Person {
 		this.address = address;
 		this.city = city;
 		this.telephone = telephone;
-		this.pets = pets;
-		
-		if(this.pets == null) {
-			this.pets = new HashSet<>();
-		}
+		this.pets = pets == null ? new HashSet<>() : pets;
 	}
 	
 	/**
