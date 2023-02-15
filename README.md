@@ -13,9 +13,6 @@ Open root project: Spring-Pet-Clinic/spring-pet-clinic
 
 run pet-clinic-web as a Spring Boot App
 
-* application: http://localhost:8080/
-* h2 database: h2-console/
-
 * Use of Advanced Java Programming techniques
 * Spring Data JPA
 * Project Lombok
