@@ -1,9 +1,10 @@
 # Spring-Pet-Clinic
 
-
 John Thompson's Udemy course Spring Framework 5: Beginner to Guru
 
-* Use of Advanced Java Programming techniques
+My Build:
+
+* Advanced Java Programming
 * Spring Data JPA
 * Project Lombok
 * jakarta persistence api
