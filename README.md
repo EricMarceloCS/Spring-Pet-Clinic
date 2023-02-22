@@ -17,6 +17,8 @@ Set Up:
 
 IDE JRE System Library configured with Java jdk-17.0.3
 
+Download and install project lombok from https://projectlombok.org/
+
 clone project
 
 Open root project: Spring-Pet-Clinic/spring-pet-clinic
