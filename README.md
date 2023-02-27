@@ -7,6 +7,7 @@ My Build:
 * Advanced Java Programming
 * Spring Data JPA
 * Project Lombok
+* Maven
 * jakarta persistence api
 * Thymeleaf
 * JUnit jupiter
@@ -17,7 +18,7 @@ Set Up:
 
 IDE JRE System Library configured with Java jdk-17.0.3
 
-Download and install project lombok from https://projectlombok.org/
+If necessary: Download and install project lombok from https://projectlombok.org/
 
 clone project
 
