@@ -14,6 +14,8 @@ My Build:
 * Mockito
 * Validation
 
+https://portfolio.blob.core.windows.net/$web/PortfolioMedia/Spring-Pet-Clinic.m4v
+
 Set Up:
 
 IDE JRE System Library configured with Java jdk-17.0.3
