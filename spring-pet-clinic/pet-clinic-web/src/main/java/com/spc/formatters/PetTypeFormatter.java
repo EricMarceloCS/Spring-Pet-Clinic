@@ -1,4 +1,4 @@
-package com.spc;
+package com.spc.formatters;
 
 import com.spc.models.*;
 import com.spc.services.*;
